@@ -1,9 +1,8 @@
 # Database_project
-
-**"Comprehensive Financial Tracking: A Database Solution for Analyzing Household Expenditures in Ashington"**
+![Screenshot_4-8-2024_15126_www bing com](https://github.com/user-attachments/assets/64a88d91-77d4-4e34-bc21-03b9ee5a7511)
 **Introduction**
-
 In managing household finances, detailed tracking and analysis of expenditures are crucial for effective budgeting and financial planning. To achieve this, a well-structured database can provide invaluable insights into spending patterns and cost distribution. This article introduces a database designed specifically for a household in Ashington, UK, to monitor and analyze living costs for a family of four. By capturing data on purchases, categorizing expenses, and linking them to individual household members, this database aims to facilitate a deeper understanding of financial habits and aid in better financial decision-making.
+
 **Title: Analyzing Household Expenditures: A Database Approach to Tracking Living Costs for a Family of Four**
 
 In today's world, managing household finances effectively requires a comprehensive understanding of spending patterns. One powerful way to gain insights into these patterns is by creating a structured database to record and analyze expenditures. This article showcases a database designed for a household in Ashington, UK, to study living costs for a family of four. The aim is to provide a detailed view of household spending, encompassing various categories, services, and products.
@@ -18,9 +17,9 @@ The `Buyer` table contains information about each household member, including th
 
 ```sql
 CREATE TABLE Buyer (
-   Id INT AUTO_INCREMENT PRIMARY KEY,
+   Id INT PRIMARY KEY,
    Buyer_Name VARCHAR(50) NOT NULL,
-   Buyer_Id VARCHAR(3) NOT NULL UNIQUE,
+   Buyer_Id VARCHAR(3) NOT NULL,
    Position VARCHAR(10) NOT NULL,
    DOB DATE NOT NULL
 );
@@ -48,15 +47,14 @@ The `Purchase` table records every expenditure made by the household, providing 
 
 ```sql
 CREATE TABLE Purchase (
-    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Id INT PRIMARY KEY,
     Buyer_Id VARCHAR(3) NOT NULL,
     Item VARCHAR(50) NOT NULL,
     Item_category VARCHAR(50) NOT NULL,
     Service_provider VARCHAR(50) NOT NULL,
     Price DECIMAL(10, 2) NOT NULL,
     Quantity INT NOT NULL,
-    `Date` DATE NOT NULL,
-    FOREIGN KEY (Buyer_Id) REFERENCES Buyer(Buyer_Id)
+    `Date` DATE NOT NULL
 );
 ```
 
@@ -109,4 +107,4 @@ These queries display all records in the `Purchase` and `Buyer` tables, providin
 
 Creating and maintaining a detailed database like the one described provides valuable insights into household finances. By categorizing and recording every purchase, families can better manage their budgets, identify areas for cost savings, and make informed financial decisions. This structured approach not only helps in understanding current spending patterns but also aids in planning for future financial needs.
 
-This database serves as a powerful tool for the Elyon household in Ashington, UK, and can be adapted for similar use cases in different contexts or locations.
+
