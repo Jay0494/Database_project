@@ -25,7 +25,7 @@ CREATE TABLE Buyer (
 );
 ```
 
-- **Id**: Auto-incremented primary key for unique identification.
+- **Id**: primary key for unique identification.
 - **Buyer_Name**: Full name of the household member.
 - **Buyer_Id**: Unique identifier for each buyer.
 - **Position**: Role or relationship to the household (e.g., Husband, Wife, Son, Daughter).
@@ -58,7 +58,7 @@ CREATE TABLE Purchase (
 );
 ```
 
-- **Id**: Auto-incremented primary key for unique identification of purchases.
+- **Id**: primary key for unique identification of purchases.
 - **Buyer_Id**: Links to the `Buyer` table to identify who made the purchase.
 - **Item**: Description of the purchased item.
 - **Item_category**: Category of the item (e.g., Groceries, Health_care).
