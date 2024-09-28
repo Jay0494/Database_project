@@ -3,7 +3,7 @@
 ## **Introduction**
 In managing household finances, detailed tracking and analysis of expenditures are crucial for effective budgeting and financial planning. To achieve this, a well-structured database can provide invaluable insights into spending patterns and cost distribution. This article introduces a database designed specifically for a household in Ashington, UK, to monitor and analyze living costs for a family of four. By capturing data on purchases, categorizing expenses, and linking them to individual household members, this database aims to facilitate a deeper understanding of financial habits and aid in better financial decision-making.
 
-**Title: Analyzing Household Expenditures: A Database Approach to Tracking Living Costs for a Family of Four**
+**Title: Analyzing Household Expenditures: A Database Approach to Tracking Living Costs for a Family of Four** 
 
 In today's world, managing household finances effectively requires a comprehensive understanding of spending patterns. One powerful way to gain insights into these patterns is by creating a structured database to record and analyze expenditures. This article showcases a database designed for a household in Ashington, UK, to study living costs for a family of four. The aim is to provide a detailed view of household spending, encompassing various categories, services, and products.
 
