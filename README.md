@@ -7,6 +7,7 @@ In managing household finances, detailed tracking and analysis of expenditures a
 
 In today's world, managing household finances effectively requires a comprehensive understanding of spending patterns. One powerful way to gain insights into these patterns is by creating a structured database to record and analyze expenditures. This article showcases a database designed for a household in Ashington, UK, to study living costs for a family of four. The aim is to provide a detailed view of household spending, encompassing various categories, services, and products.
 
+---
 ### **Database Structure Overview**
 
 The database is composed of two primary tables: `Buyer` and `Purchase`. These tables are designed to capture key information about household members and their expenditures, respectively.
@@ -40,7 +41,7 @@ VALUES
    ('Shaun', 'E3', 'Son', '2022-04-04'),
    ('Eliana', 'E4', 'Daughter', '2023-08-22');
 ```
-
+---
 #### **2. Purchase Table**
 
 The `Purchase` table records every expenditure made by the household, providing detailed insights into spending habits. The schema for the `Purchase` table is:
@@ -123,7 +124,7 @@ INSERT	INTO purchase (Buyer_Id, Item, Item_category, Service_provider, Price, Qu
 				 ('E2', 'Mens Tops', 'Clothes', 'Sence', 1.25, 1, '2025-01-11'),
              ('E2', 'Shoes', 'Clothes', 'Sence', 3.75, 1, '2025-01-11');
 ```
-
+---
 ### **Data Correction**
 
 An error in the item category for one of the entries was identified and corrected using the following SQL statement:
@@ -152,7 +153,19 @@ SET Item_category = CASE
     ELSE Item_category 
 END;    
 ```
+---
+### TASK
+The head of the household wants to know their categorical spending from top to bottom.
+Using SQL
+```sql
+SELECT Item_category, SUM(Price * Quantity) AS Total_expenses
+FROM purchase 
+GROUP BY Item_category
+ORDER BY Total_expenses DESC;
+```
+![EXPENSES TRACKING ](https://github.com/user-attachments/assets/f4c75ecc-e488-4879-8388-34f0ac1fabfc)
 
+---
 ### **Data Analysis**
 
 Using the provided data, several analyses can be conducted to understand spending behaviors:
